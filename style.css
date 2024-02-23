@@ -358,7 +358,7 @@ input[placeholder] {
   }
 
   .quiz_status {
-    bottom: 10px;
+    bottom: 20px !important;
     left:20px !important;
     transform: translateX(0) !important;
     display: none;

@@ -423,7 +423,7 @@ input[placeholder] {
 .quiz_questions {
   background-image: url("Images/diamonds-g2d69664ab_1920.jpg");
   width: 50vw;
-  height: 80vh;
+  height: 75vh;
   padding: 0 20px;
   position: relative;
   border-radius: 10px;
@@ -674,7 +674,7 @@ input[placeholder] {
   height: 80vh;
   border-radius: 15px;
   border: 10px solid transparent;
-  /* display: none; */
+  display: none;
 }
 
 /* #4e403d */

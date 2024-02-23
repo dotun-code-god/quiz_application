@@ -358,7 +358,7 @@ input[placeholder] {
   }
 
   .quiz_status {
-    bottom: 20px !important;
+    bottom: 50px !important;
     left:20px !important;
     transform: translateX(0) !important;
     display: none;
@@ -426,6 +426,7 @@ input[placeholder] {
   height: 75vh;
   padding: 0 20px;
   position: relative;
+  top: -50px;
   border-radius: 10px;
   display: none;
   align-items: center;
@@ -471,7 +472,7 @@ input[placeholder] {
 
 .quiz_status {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   display: none;
   left:50%;
   transform: translateX(-50%);

@@ -7,6 +7,7 @@ var image_array = [
   "'Images/school-g724186947_1920.jpg'",
 ];
 var welcome_page = document.querySelector(".welcome-page");
+var welcome_text = document.querySelector(".welcome-text");
 var quiz_page = document.querySelector(".quiz_questions");
 var start_quiz = document.querySelector("#welcome_form + button");
 var quiz_status = document.querySelector(".quiz_status");
@@ -204,7 +205,6 @@ var num = 1;
 //       </div>`;
 
 //     var input_state = document.querySelectorAll("input[name=options]");
-//     console.log(input_state);
 //     for (const inputs of input_state) {
 //       inputs.addEventListener("click", checkAnswer);
 //     }
@@ -248,21 +248,29 @@ prev.addEventListener('click', function(){
 let answers = {};
 function nextQuestion(){
   var input_state = document.querySelectorAll("input.state");
-  let isNotAnswered = true;
+  let isAnswered = false;
   for (const inputs of input_state) {
     if(inputs.checked){
       answers[qIndex] = inputs.getAttribute('result');
-      isNotAnswered = false;
+      isAnswered = true;
     }
+    console.log(inputs.checked)
   }
-  if(isNotAnswered){
+  console.log({isAnswered})
+  if(!isAnswered){
     document.querySelector(`#status${qIndex}`).classList.add("wrong");
+  }else{
+    document.querySelector(`#status${qIndex}`).classList.remove("wrong");
+    document.querySelector(`#status${qIndex}`).classList.add("running");
   }
+  
   qIndex++
+  if (currentQuestion.answer == answers[qIndex-1]) {
+    score++;
+  }
   if(qIndex >= array_of_questions.length) return finish();
   // time += duration;
   renderQuestion();
-  console.log(answers)
 }
 function prevQuestion(){
   qIndex--
@@ -274,7 +282,6 @@ function prevQuestion(){
 }
 
 function renderQuestion() {
-  console.log(answers[qIndex])
   timer();
   currentQuestion = array_of_questions[qIndex];
   quiz_body.innerHTML = `
@@ -322,12 +329,6 @@ function checkAnswer(e) {
   if(e.target.getAttribute("result")){
     document.querySelector(`#status${qIndex}`).classList.add("running");
   }
-    // if (currentQuestion.answer == e.target.getAttribute("result")) {
-    //   score++;
-    //   document.querySelector(`#status${qIndex}`).classList.add("correct");
-    // } else {
-    //   document.querySelector(`#status${qIndex}`).classList.add("wrong");
-    // }
 // nextQuestion();
 }
 
@@ -352,7 +353,8 @@ function startQuiz(){
 };
 
 function exitQuiz(){
-  welcome_page.style.display = "flex";
+  welcome_page.style.display = "block";
+  welcome_text.style.display = "flex";
   quiz_status.style.display = "none";
   result_box.style.display = "none";
 }
@@ -364,11 +366,11 @@ function finish(){
   quiz_page.style.display = 'none'
   quiz_timer.style.display = 'none'
   result_box.style.display = 'block'
+  quiz_status.style.display = 'none'
   var percentageScore = score/array_of_questions.length * 100;
   var determine_percentage = percentageScore >= passMark;
   var cater_decimal = percentageScore.toString().indexOf('.') != -1 ? percentageScore.toFixed(2): percentageScore ;
   var determine_fail = percentageScore < failMark;
-  console.log('score');
   // if (percentageScore < failMark){
   //   final_result.style.color = "rgb(179, 0, 0)";
   // }
@@ -393,7 +395,6 @@ function finish(){
       </div>
     </div>
   `;
-  console.log(result_box)
   time = 0;
   score = 0;
 }

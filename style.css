@@ -183,6 +183,7 @@ body {
 }
 
 .fulName input {
+  width: 100%;
   border: none;
   outline: none;
   background-color: transparent;
@@ -194,6 +195,34 @@ body {
   .fulName fieldset {
     margin-bottom: 10px;
     width:100%;
+  }
+
+  .result_box{
+    height: 55vh !important;
+  }
+
+  .result_box::before{
+    display: none !important;
+  }
+
+  .result img {
+    width: 150px !important;
+    margin-top: 50px;
+    height: auto;
+    animation: animate_trophy 2s;
+  }
+
+  .result_feedback{
+    margin-top:20px;
+  }
+  
+  .result_feedback>p{
+    font-size:20px !important;
+  }
+
+  .result_button button{
+    padding: 5px 15px !important;
+    margin-right: 10px !important;
   }
 
   #welcome_form {
@@ -542,7 +571,7 @@ input[placeholder] {
   /* left: 0px; */
   font-weight: bold;
   font-size: 18px;
-  font-family: Lucida Handwriting;
+  font-family: Candara;
   width: 100%;
   color: crimson;
 }
@@ -672,6 +701,8 @@ input[placeholder] {
   background-size: cover;
   position: relative;
   width: 80vh;
+  max-width: 90%;
+  margin: 0 auto;
   height: 80vh;
   border-radius: 15px;
   border: 10px solid transparent;

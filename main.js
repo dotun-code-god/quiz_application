@@ -38,10 +38,7 @@ var array_of_questions = [
   {
     question_num: "2",
     question: "The zeroes of 𝑥 2 − 2𝑥 − 8 are",
-    options: [
-      "(2, −4)", "(4, −2)", "(−2, −2)", "(−4, −4)"
-
-    ],
+    options: ["(2, −4)", "(4, −2)", "(−2, −2)", "(−4, −4)"],
     answer: 1,
   },
   {
@@ -83,8 +80,8 @@ var array_of_questions = [
   {
     question_num: "8",
     question: "If 𝛼, 𝛽 are roots of the equation 2𝑥2 − 8𝑥 − 5 = 0, find the values of 𝛼2 + 𝛽2",
-    options: ["26", "21", "4√26", "25", "9"],
-    answer: 4,
+    options: ["26", "21", "4√26", "9"],
+    answer: 3,
   },
   {
     question_num: "9",
@@ -125,13 +122,13 @@ var array_of_questions = [
   {
     question_num: "15",
     question: "The 5th term and 13th terms of an AP are 16 and 40. Find the first term and the common difference",
-    options: ["4 and 3", " 3 and 4", "16 and 40", " 4 and 2", "3 and 40"],
+    options: ["4 and 3", " 3 and 4", "16 and 40", " 4 and 2"],
     answer: 0,
   },
   {
     question_num: "16",
     question: "Given the G.P 4, 16, 64. … find the sum of the first 5th term of the series",
-    options: [" 1,634", "1,364", "1,463", "364", "136"],
+    options: [" 1,634", "1,364", "1,463", "364"],
     answer: 1,
   },
   {
@@ -167,7 +164,7 @@ var array_of_questions = [
   {
     question_num: "22",
     question: "If L1 be the line through the points (-3, 4) and (2, 6) and L2 the line through the points (1, -2) and (-1, 3), the slopes of the two lines are ",
-    options: ["2/5 and -5/2", "-2/5 and -5/2", " -2/5 and 5/2", "2/5 and 5/2"],
+    options: ["2/5 and -5/2", "-2/5 and -5/2", " -2/5 and 5/2"],
     answer: 0,
   },
 ];
@@ -365,11 +362,6 @@ function renderQuestion() {
             <div class="radio_container"><input class="state" result="3" type="radio" name="options" id="d" ${answers[qIndex] == "3" && "checked"}>
               <label class="label" for="d"><div class="indicator"></div>
                 <span class="text">${currentQuestion.options[3]}</span>
-              </label>
-            </div>
-            <div class="radio_container"><input class="state" result="4" type="radio" name="options" id="d" ${answers[qIndex] == "4" && "checked"}>
-              <label class="label" for="d"><div class="indicator"></div>
-                <span class="text">${currentQuestion.options[4] ?? 'none'}</span>
               </label>
             </div>
           </form>

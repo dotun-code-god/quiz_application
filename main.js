@@ -26,96 +26,149 @@ var failMark = 40;
 var array_of_questions = [
   {
     question_num: "1",
-    question: "In 1768, Captain James Cook set out to explore which ocean?",
+    question: "The 6th term of a G.P. is 32 and its 8th term is 128, then find the common ratio of the G.P.",
     options: [
-      "Pacific Ocean",
-      "Atlantic Ocean",
-      "Indian Ocean",
-      "Arctic Ocean",
-    ],
-    answer: 0,
-  },
-  {
-    question_num: "2",
-    question: "What is actually electricity?",
-    options: [
-      "A flow of water",
-      "A flow of air",
-      " A flow of electrons",
-      " A flow of atoms",
+      1,
+      4,
+      2,
+      7,
     ],
     answer: 2,
   },
   {
+    question_num: "2",
+    question: "The zeroes of 𝑥 2 − 2𝑥 − 8 are",
+    options: [
+      "(2, −4)", "(4, −2)", "(−2, −2)", "(−4, −4)"
+
+    ],
+    answer: 1,
+  },
+  {
     question_num: "3",
-    question: "Which of the following is not an international organisation?",
-    options: ["FIFA", "NATO", "FIFA", " FBI"],
+    question: "If the zeroes of the quadratic polynomial 𝑎𝑥 2 + 𝑏𝑥 + 𝑐, 𝑐 ≠ 0 are equal, then ",
+    options: ["c and b have opposite signs", "c and a have opposite signs", "c and b have same signs", " c and a have same signs"],
     answer: 3,
   },
   {
     question_num: "4",
-    question: "Which of the following disorders is the fear of being alone?",
-    options: ["Agoraphobia", "Aerophobia", "Acrophobia", "Arachnophobia"],
-    answer: 0,
-  },
+    question: "Transpose of a rectangular matix is",
+    options: ["scalar matrix", "square matrix", "diagonal matrix", "rectangular matrix"],
+    answer: 3,
+  },  
   {
     question_num: "5",
     question:
-      "Which of the following is a song by the German heavy metal band “Scorpions”?",
+      "Find the value of k, if (x-2) is a factor of 4𝑥3 + 3𝑥2 − 4𝑥 + k",
     options: [
-      "Stairway to Heaven",
-      "Wind of Change",
-      "Don’t Stop Me Now",
-      "Hey Jude",
+      "12",
+      "-12",
+      "36",
+      "-36",
     ],
-    answer: 1,
-  },
-  {
-    question_num: "6",
-    question: "What is the speed of sound?",
-    options: ["120 km/h", "1,200 km/h", "400 km/h", "700 km/h"],
-    answer: 1,
-  },
-  {
-    question_num: "7",
-    question: "Which is the easiest way to tell the age of many trees?",
-    options: [
-      "To measure the width of the tree",
-      "To count the rings on the trunk",
-      "To count the number of leaves",
-      "To measure the height of the tree",
-    ],
-    answer: 1,
-  },
-  {
-    question_num: "8",
-    question: "What do we call a newly hatched butterfly?",
-    options: ["A moth", "A butter", "A caterpillar", "A chrysalis"],
-    answer: 2,
-  },
-  {
-    question_num: "9",
-    question: "In total, how many novels were written by the Bronte sisters?",
-    options: [4, 5, 6, 7],
     answer: 3,
   },
   {
+    question_num: "6",
+    question: "Simplify 𝑠𝑖𝑛𝜃/𝑐𝑜𝑠𝜃 ",
+    options: ["𝑐𝑜𝑠𝑒𝑐𝜃", "𝑐𝑜𝑠𝜃", "𝑐𝑜𝑡𝜃", "𝑡𝑎𝑛𝜃"],
+    answer: 3,
+  },
+  {
+    question_num: "7",
+    question: "Solve 2+√3/3−√3",
+    options: ["2√6", "5/2√2", "9+5√3/6", "1/√3"],
+    answer: 2,
+  },
+  {
+    question_num: "8",
+    question: "If 𝛼, 𝛽 are roots of the equation 2𝑥2 − 8𝑥 − 5 = 0, find the values of 𝛼2 + 𝛽2",
+    options: ["26", "21", "4√26", "25", "9"],
+    answer: 4,
+  },
+  {
+    question_num: "9",
+    question: "Solve: 2𝑥 + 𝑦 = 13 and 𝑥 − 𝑦 = 8",
+    options: [" 𝑥 = 3, 𝑦 = −1 ", " 𝑥 = 4, 𝑦 = −1 ", " 𝑥 = 7, 𝑦 = −1", "𝑥 = 𝑎, 𝑦 = 0"],
+    answer: 2,
+  },
+  {
     question_num: "10",
-    question: "Which did Viking people use as money?",
-    options: ["Rune stones", "Jewellery", "Seal skins", "Wool"],
-    answer: 1,
+    question: "Simplify √20 + √45 + √125 − 2√80 ",
+    options: ["2√3", "2√7", "2√5", "11√2"],
+    answer: 2,
   },
   {
     question_num: "11",
-    question: "Which did Viking people use as money?",
-    options: ["Rune stones", "Jewellery", "Seal skins", "Wool"],
-    answer: 1,
+    question: "Find the gradient m of the line passing through (1, 3) and (-4, 2)",
+    options: ["m=1/2", "m=-1/5", "m=-1/6", "m=1/5"],
+    answer: 3,
   },
   {
     question_num: "12",
-    question: "Which did Viking people use as money?",
-    options: ["Rune stones", "Jewellery", "Seal skins", "Wool"],
+    question: "The equation of a line whose gradient is 5 and intercept on y axis is -6 is",
+    options: ["𝑦 = −6𝑥 + 5", " 𝑦 = 5𝑥 − 6", " 𝑦 = 5𝑥 − 3 ", "𝑦 = −5𝑥 − 6"],
     answer: 1,
+  },
+  {
+    question_num: "13",
+    question: "Find the angle of slope 𝜃 of the line passing through these points (1, 3) and (-4, 2)",
+    options: [" 𝜃 = 11.31°", " 𝜃 = 10.31° ", " 𝜃 = 12.31° ", " 𝜃 = 13.31° "],
+    answer: 0,
+  },
+  {
+    question_num: "14",
+    question: "Find the gradient of a line whose equation is 5𝑥 + 2𝑦 − 3 = 0",
+    options: ["5/2", "-5/2", " Q(2,2)", " Q(-2, 0)"],
+    answer: 1,
+  },
+  {
+    question_num: "15",
+    question: "The 5th term and 13th terms of an AP are 16 and 40. Find the first term and the common difference",
+    options: ["4 and 3", " 3 and 4", "16 and 40", " 4 and 2", "3 and 40"],
+    answer: 0,
+  },
+  {
+    question_num: "16",
+    question: "Given the G.P 4, 16, 64. … find the sum of the first 5th term of the series",
+    options: [" 1,634", "1,364", "1,463", "364", "136"],
+    answer: 1,
+  },
+  {
+    question_num: "17",
+    question: "Divide the sum of the values of 3!, 4!, 5!, 𝑎𝑛𝑑 6! By 10",
+    options: [" 178", "817", "807", "87"],
+    answer: 3,
+  },
+  {
+    question_num: "18",
+    question: "Find the value of 9P9 / 10P3",
+    options: [" 1504", "11", "315", "504"],
+    answer: 3,
+  },
+  {
+    question_num: "19",
+    question: "In how many ways can I choose two red balls and three black balls from a bag containing five red and six black balls? ",
+    options: [" 200", "213", "300", "2400"],
+    answer: 0,
+  },
+  {
+    question_num: "20",
+    question: "Evaluate (9C6 x 7C3) / (4C2 x 8C4)",
+    options: ["3", "21", "49", "7"],
+    answer: 3,
+  },
+  {
+    question_num: "21",
+    question: "A man has five flags. In how many ways can he fly them one above the other?",
+    options: ["210", "12", "120", "326"],
+    answer: 2,
+  },
+  {
+    question_num: "22",
+    question: "If L1 be the line through the points (-3, 4) and (2, 6) and L2 the line through the points (1, -2) and (-1, 3), the slopes of the two lines are ",
+    options: ["2/5 and -5/2", "-2/5 and -5/2", " -2/5 and 5/2", "2/5 and 5/2"],
+    answer: 0,
   },
 ];
 
@@ -312,6 +365,11 @@ function renderQuestion() {
             <div class="radio_container"><input class="state" result="3" type="radio" name="options" id="d" ${answers[qIndex] == "3" && "checked"}>
               <label class="label" for="d"><div class="indicator"></div>
                 <span class="text">${currentQuestion.options[3]}</span>
+              </label>
+            </div>
+            <div class="radio_container"><input class="state" result="4" type="radio" name="options" id="d" ${answers[qIndex] == "4" && "checked"}>
+              <label class="label" for="d"><div class="indicator"></div>
+                <span class="text">${currentQuestion.options[4] ?? 'none'}</span>
               </label>
             </div>
           </form>
